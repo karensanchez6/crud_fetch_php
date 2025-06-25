@@ -6,8 +6,11 @@ class DB {
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             return $conexion;
         } catch (PDOException $e) {
-            die(json_encode(['success' => false, 'message' => 'Error de conexión']));
+            die(json_encode([
+                'success' => false,
+                'message' => 'Error de conexión a la base de datos',
+                'error' => $e->getMessage()
+            ]));
         }
     }
 }
-?>

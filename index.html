@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gestión de Productos</title>
+  <title>Gestion de Productos</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
@@ -42,8 +42,14 @@
         Guardar Producto
       </button>
     </form>
+
+    <h3 class="text-lg font-semibold text-pink-700 mt-8">Lista de productos</h3>
+    <div id="lista" class="mt-4 space-y-2"></div>
   </div>
 
   <script src="script.js"></script>
+  <script>
+    listarProductos(); // cargar productos al iniciar
+  </script>
 </body>
 </html>
